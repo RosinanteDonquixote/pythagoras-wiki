@@ -493,7 +493,7 @@
 
 <script>
   const CONFIG = {
-    GEMINI_API_KEY: 'AIzaSyA__yZc0hdayoIO3eg7YCsbP2oRwLd9FwQ',
+    GEMINI_API_KEY: 'AIzaSyCtX8nYuEuRlKda2IoaoQBZrDuKeYvBE08',
     PROXY_URL: 'https://pythagoras.albertolegario-garcia.workers.dev',
     WIKI_API: 'https://onepiece.fandom.com/api.php',
     MAX_WIKI_CHARS: 12000,
@@ -595,7 +595,8 @@ INSTRUCCIÓN CRÍTICA DE IDIOMA: Detecta el idioma de la pregunta y responde SIE
       addMsg('ai', reply, articles);
     } catch (err) {
       removeThinking(tid);
-      addMsg('ai', '⚠ El Den Den Mushi falló. Inténtalo de nuevo, nakama.');
+      console.error('ERROR COMPLETO:', err);
+      addMsg('ai', '⚠ Error: ' + err.message);
     }
 
     btn.disabled = false;
