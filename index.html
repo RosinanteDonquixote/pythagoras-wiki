@@ -493,7 +493,6 @@
 
 <script>
   const CONFIG = {
-    GEMINI_API_KEY: 'AIzaSyAu3GWxfKwRwr6_CzdFkv_XEDbvgK3syJA',
     PROXY_URL: 'https://pythagoras.albertolegario-garcia.workers.dev',
     WIKI_API: 'https://onepiece.fandom.com/api.php',
     MAX_WIKI_CHARS: 12000,
@@ -554,7 +553,6 @@ INSTRUCCIÓN CRÍTICA DE IDIOMA: Detecta el idioma de la pregunta y responde SIE
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        apiKey: CONFIG.GEMINI_API_KEY,
         payload: {
           system_instruction: { parts: [{ text: system }] },
           contents,
